@@ -1,0 +1,56 @@
+@property --d
+{
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+}
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: #32302f;
+}
+
+button{
+    margin: 40px;
+    width: 200px;
+    height: 50px;
+font-size: 30px;
+color:#fff;
+background : none;
+border: #fff ;
+border-radius: 20px;
+position: relative;
+
+}
+.box{
+    position: relative;
+
+}
+input{
+    border: solid 1px orange;
+    border-radius:  5px;
+    background: none;
+    padding: .5rem; 
+    font-size: 1rem;
+    transition: 150ms cubic-bezier(.4 , 0, .2, 1);
+
+}
+label{
+position: absolute;
+left: 16px;
+pointer-events: none;
+transition: 150ms cubic-bezier(.4 , 0, .2, 1);
+transform: translateY(1rem);
+}
+input:focus{
+    outline: none;
+    border: 1.5 solid rgb(255, 166, 2);
+
+}
+input:focus ~ label{
+    transform: translateY(-50%) scale(1.1);
+    background: #32302f;
+    color: rgb(255, 166, 2);
+}
